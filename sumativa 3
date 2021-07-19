@@ -1,0 +1,41 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+float a, b, c, det, x1, x2, im1, im2;
+int main() {
+	cout << "ingrese los valores de a, b, c de la siguiente expresion: "<< endl;
+	cout << "ax2 + bx + c = 0"<< endl << endl; 
+	cout<< "ingrese a: ";
+	cin>> a;
+	cout<< "ingrese b: ";
+	cin>> b;
+	cout<< "ingrese c: ";
+	cin>> c;
+	
+	det=b*b - 4.00*a*c;
+	
+	if(det>0){
+		x1=(-b+(pow(det, 0.5)))/(2*a);
+		x2=(-b-(pow(det, 0.5)))/(2*a);
+		cout << "x1 = " <<x1 <<endl;
+		cout << "x2 = " <<x2 <<endl;
+	}
+	if(det==0){
+		x1=(-b)/(2*a);
+		x2=x1;
+		cout <<endl << endl <<"x1 = x2 = " <<x1;
+	}
+	if(det<0){
+		x1=(-b)/(2*a);
+		x2=(-b)/(2*a);
+		det =(-1)*det;
+		im1= (pow(det,0.5))/(2*a); 
+		im1=((-1)*pow(det,0.5))/(2*a);
+		cout <<"x1= " <<x1 <<" + "<<im1<<"i"<< endl;
+		cout <<"x2= " <<x2 <<" + "<<im2<<"i"<< endl;
+	}
+	
+	cin.get();
+	return 0;
+}
