@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//sumativa 4
+
+int main(int argc, char *argv[]) {
+	float Ventas[3][5];
+	char Dias[1][5][10]={"Lunes","Martes","Miercoles","Jueves","Viernes"};
+	int a, b;
+	float Total, Promedio;
+	for (a=0; a<3; a++){
+		for(b=0; b<5; b++){
+			printf("%s\n Monto del vendedor %d: ",Dias[0][b],a+1);
+			scanf("%f", &Ventas[a][b]);
+		}
+	}
+	for (a=0; a<3; a++){
+		for(b=0; b<5; b++){
+			Total += Ventas[a][b];
+			
+		}
+	}
+	printf("El total de las ventas es: %.2f",Total);
+		Promedio = Total/15;
+		printf("\nel promedio de ventas es: %.2f",Promedio);
+	return 0;
+}
