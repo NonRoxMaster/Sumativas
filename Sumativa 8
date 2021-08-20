@@ -1,0 +1,16 @@
+#include <stdio.h>
+//Sumativa 8 Miguel DIaz
+int main() {
+    int num1;
+    int count=1,multi;
+    printf("introdusca el numero para ver su tabla de multiplicion:");
+    scanf("%d",&num1);
+    printf("\n");
+    while(count<=10){
+        multi=num1*count;
+    printf(" %d x %d = %d\n",num1,count,multi);
+    count++;}
+
+    return 0;
+
+}
